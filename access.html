@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Password</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      text-align: center;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      background-color: #f9fbfd;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-top: 15px;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #888;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Password to Access SKY PYT PREMIUMS</h2>
+
+  <input type="password" id="password" placeholder="Enter password">
+  <br>
+  <button onclick="checkPassword()">Submit</button>
+
+  <p class="error" id="errorMsg"></p>
+
+  <footer>
+    <p>&copy; 2025 SKY PYT PREMIUMS | Proudly built by SHANEL</p>
+  </footer>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      const correct = "sky123"; // You can change the password here
+
+      if (password === correct) {
+        window.location.href = "assistance.html";
+      } else {
+        document.getElementById('errorMsg').innerText = "Incorrect password!";
+      }
+    }
+  </script>
+
+</body>
+</html>
